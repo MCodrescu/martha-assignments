@@ -14,6 +14,7 @@ function appendBoxes(labels) {
     input.setAttribute("id", `${labels[index]}`);
     input.setAttribute("name", `${labels[index]}`);
     input.setAttribute("value", `${labels[index]}`);
+    input.setAttribute("method", "POST");
     div.appendChild(input);
 
     let label = document.createElement("label");
@@ -22,7 +23,7 @@ function appendBoxes(labels) {
     label.innerHTML = `${labels[index]}`;
     div.appendChild(label);
 
-    checkBoxesForm.appendChild(div);
+    checkBoxesForm.insertBefore(div, checkBoxesForm.childNodes[0]);
   }
 }
 

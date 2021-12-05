@@ -71,7 +71,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <?php require 'fetch-data.php' ?>
 
     <!--Check Boxes-->
-    <div class="container" id="check-boxes"></div>
+    <form method="POST">
+        <div class="container" id="check-boxes">
+            <div class="form-group align-right">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+        </div>
+
+    </form>
 
     <!--Fill Check Boxes-->
     <script src="fill-check-boxes.js"></script>
