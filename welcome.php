@@ -46,9 +46,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
     </nav>
 
+    <!--Header-->
+    <div class="container py-3">
+        <div class="row">
+            <div class="col text-center">
+                <h1>Assignments Overview</h1>
+            </div>
+        </div>
+    </div>
 
     <!--Assignments Table-->
-    <div class="container py-5">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <table class="table table-striped table-hover table-sm">
@@ -61,6 +69,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <!--Fill the Table-->
     <?php require 'fetch-data.php' ?>
+
+    <!--Check Boxes-->
+    <div class="container" id="check-boxes"></div>
+
+    <!--Fill Check Boxes-->
+    <script src="fill-check-boxes.js"></script>
 
 </body>
 
