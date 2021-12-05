@@ -132,7 +132,7 @@ background-repeat:no-repeat;
 
         <!--Login Form-->
         <div class="row justify-content-center">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-lg-4">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group">
                         <label>Username</label>
