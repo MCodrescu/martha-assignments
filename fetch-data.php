@@ -29,8 +29,13 @@ mysqli_close($conn);
 
 ?>
 
-<!--Pass the PHP array to js-->
+<!--Pass the PHP array to js and fill the table -->
+<script src="fillTable.js"></script>
 <script>
     let tableData = <?= json_encode($array); ?>;
-    fillTable(tableData);
+    fillTable(tableData,
+        tableHeadId = "#tableHead",
+        tableBodyId = "#tableBody",
+        colNames = ["Class", "AssignmentName", "DueDate", "Completed"],
+        colLabels = ["Class", "Assignment", "Due Date", "Completed?"]);
 </script>
