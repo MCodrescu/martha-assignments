@@ -71,20 +71,35 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <?php require 'fetch-data.php' ?>
 
     <!--Check Boxes-->
-    <form method="post">
-        <div class="container" id="check-boxes">
-            <div class="form-group align-right">
-                <input id="submit" type="submit" class="btn btn-primary" value="Submit">
+    <div class="container">
+
+        <div class="row">
+            <div class="col fst-italic">
+                <p>Mark as completed below</p>
             </div>
         </div>
 
-    </form>
+        <div class="row">
+            <div class="col">
+                <form method="post">
+                    <div class="container" id="check-boxes">
+                        <div class="form-group align-right pt-2">
+                            <input id="submit" type="submit" class="btn btn-primary" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
 
     <!--Fill Check Boxes-->
     <script src="fill-check-boxes.js"></script>
 
-    <!--Add a Submit Event Listener-->
+    <!--Add a Submit Button Event Listener-->
     <script>
+        // The table will refresh only once the button is clicked.
         let submitButton = document.querySelector("#submit");
         submitButton.addEventListener('click', function() {
             <?php require_once "mark-completed.php" ?>
@@ -94,5 +109,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </body>
+
+<!--Footer-->
+<footer class="footer">
+    <div class="container-fluid position-absolute bottom-0" style=" background-color: #f0f0f5;">
+        <span class="text-muted">Created by Marcus Codrescu</span>
+    </div>
+</footer>
 
 </html>

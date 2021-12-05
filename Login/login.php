@@ -100,11 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-image: url('../www/gradient-background.jpeg'); 
-background-size:cover; 
-background-attachment:fixed; 
-background-repeat:no-repeat;
-">
+<body>
 
     <?php
     if (!empty($login_err)) {

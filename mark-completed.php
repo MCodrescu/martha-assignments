@@ -14,6 +14,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 };
 
+// Update the database to change assignment to completed.
 if (count($_POST) != 0) {
     $sql = "UPDATE assignments_fall_2021 SET Completed = 'Yes' WHERE AssignmentName = ";
 
@@ -22,6 +23,7 @@ if (count($_POST) != 0) {
         mysqli_query($conn, $sql);
     };
 
+    // Reset the POST array and refresh the page.
     $_POST = array();
     mysqli_close($conn);
     header("location: welcome.php");
