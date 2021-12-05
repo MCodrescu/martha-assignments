@@ -68,7 +68,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
 
     <!--Fill the Table-->
-    <?php require 'fetch-data.php' ?>
+    <?php require 'Database/fetch-data.php' ?>
 
     <!--Check Boxes-->
     <div class="container">
@@ -95,14 +95,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
     <!--Fill Check Boxes-->
-    <script src="fill-check-boxes.js"></script>
+    <script src="JavaScript/fill-check-boxes.js"></script>
 
     <!--Add a Submit Button Event Listener-->
     <script>
         // The table will refresh only once the button is clicked.
         let submitButton = document.querySelector("#submit");
         submitButton.addEventListener('click', function() {
-            <?php require_once "mark-completed.php" ?>
+            <?php require_once "Database/mark-completed.php" ?>
         })
     </script>
 

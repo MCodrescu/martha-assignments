@@ -29,7 +29,7 @@ mysqli_close($conn);
 ?>
 
 <!--Pass the PHP array to js and fill the table -->
-<script src="fillTable.js"></script>
+<script src="JavaScript/fillTable.js"></script>
 <script>
     let tableData = <?= json_encode($array); ?>;
     fillTable(tableData,
