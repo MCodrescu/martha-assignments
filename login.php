@@ -100,7 +100,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-image: url('www/colorful-background.jpeg'); background-size:cover; background-attachment:fixed; background-repeat:no-repeat;">
+<body style="background-image: url('www/gradient-background.jpeg'); 
+background-size:cover; 
+background-attachment:fixed; 
+background-repeat:no-repeat;
+">
 
     <?php
     if (!empty($login_err)) {
@@ -111,24 +115,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!--Navbar-->
     <nav class="navbar" style="background-color: #f0f0f5;">
         <div class="container-fluid">
-            <span class="navbar-text py-0">
+            <span class="navbar-text text-muted py-0">
                 Martha Assignments
             </span>
         </div>
     </nav>
 
-    <div class="container-fluid py-5 position-absolute bottom-50">
+    <div class="container-fluid py-5">
 
         <!--Page Header-->
-        <div class="row justify-content-center">
-            <div class="col-md-4 text-center" style="background-color: #f0f0f5; border-radius: 20px;">
+        <div class="row justify-content-center px-2">
+            <div class="col-sm-6 text-center" style="background-color: #f0f0f5; border-radius: 15px;">
                 <h2>Martha Assignment Tracker Login</h2>
             </div>
         </div>
 
         <!--Login Form-->
         <div class="row justify-content-center">
-            <div class="col-md-4">
+            <div class="col-sm-6">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group">
                         <label>Username</label>
@@ -153,7 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!--Footer-->
 <footer class="footer">
     <div class="container-fluid position-absolute bottom-0" style=" background-color: #f0f0f5;">
-        <span class=" text-muted">Created by Marcus Codrescu</span>
+        <span class="text-muted">Created by Marcus Codrescu</span>
     </div>
 </footer>
 
