@@ -12,7 +12,7 @@ function appendBoxes(labels) {
     input.setAttribute("class", "form-check-input");
     input.setAttribute("type", "checkbox");
     input.setAttribute("id", `${labels[index]}`);
-    input.setAttribute("name", `${labels[index]}`);
+    input.setAttribute("name", index);
     input.setAttribute("value", `${labels[index]}`);
     input.setAttribute("method", "POST");
     div.appendChild(input);

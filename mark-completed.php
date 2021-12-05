@@ -14,9 +14,15 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 };
 
-$checkBoxValue = $_REQUEST;
-?>
+if (count($_POST) != 0) {
+    $sql = "UPDATE assignments_fall_2021 SET Completed = 'Yes' WHERE AssignmentName = ";
 
-<script>
-    let request = <?= json_encode($checkBoxValue); ?>;
-</script>
+    foreach ($_POST as $assignment) {
+        $sql .= "'" . $assignment . "'";
+        mysqli_query($conn, $sql);
+    };
+
+    $_POST = array();
+    mysqli_close($conn);
+    header("location: welcome.php");
+}

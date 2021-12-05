@@ -71,10 +71,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <?php require 'fetch-data.php' ?>
 
     <!--Check Boxes-->
-    <form method="POST">
+    <form method="post">
         <div class="container" id="check-boxes">
             <div class="form-group align-right">
-                <input type="submit" class="btn btn-primary" value="Submit">
+                <input id="submit" type="submit" class="btn btn-primary" value="Submit">
             </div>
         </div>
 
@@ -82,6 +82,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <!--Fill Check Boxes-->
     <script src="fill-check-boxes.js"></script>
+
+    <!--Add a Submit Event Listener-->
+    <script>
+        let submitButton = document.querySelector("#submit");
+        submitButton.addEventListener('click', function() {
+            <?php require_once "mark-completed.php" ?>
+        })
+    </script>
+
+
 
 </body>
 
