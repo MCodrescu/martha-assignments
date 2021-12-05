@@ -125,7 +125,7 @@ background-repeat:no-repeat;
 
         <!--Page Header-->
         <div class="row justify-content-center px-2">
-            <div class="col-sm-6 text-center" style="background-color: #f0f0f5; border-radius: 15px;">
+            <div class="col-sm-8 text-center">
                 <h2>Martha Assignment Tracker Login</h2>
             </div>
         </div>
