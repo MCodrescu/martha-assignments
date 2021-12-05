@@ -15,7 +15,6 @@ if (!$conn) {
 }
 
 $today = date("Y-m-d");
-echo gettype($today);
 $sql = "SELECT * FROM assignments_fall_2021  WHERE DueDate >= " . "'" . $today . "'" . " AND Completed = 'No';";
 $result = mysqli_query($conn, $sql);
 
