@@ -26,5 +26,5 @@ if (count($_POST) != 0) {
     // Reset the POST array and refresh the page.
     $_POST = array();
     mysqli_close($conn);
-    header("Reset: ..\welcome.php");
+    header("location: ..\welcome.php");
 }
