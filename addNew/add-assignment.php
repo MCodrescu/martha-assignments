@@ -67,11 +67,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <form method="post">
                     <div class="mb-3">
                         <label for="ClassInput" class="form-label">Class</label>
-                        <input type="text" class="form-control" id="ClassInput" name="class">
+                        <input type="text" class="form-control" id="ClassInput" name="className">
                     </div>
                     <div class="mb-3">
                         <label for="AssignmentNameInput" class="form-label">Assignment Name</label>
-                        <input type="text" class="form-control" id="AssignmentNameInput" name="assignment">
+                        <input type="text" class="form-control" id="AssignmentNameInput" name="assignmentName">
                     </div>
                     <div class="mb-3">
                         <label for="DueDateInput" class="form-label">Due Date</label>
@@ -81,7 +81,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <input id="submit-new-assignment" type="submit" class="btn btn-primary" value="Submit">
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
@@ -91,7 +90,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         // The table will refresh only once the button is clicked.
         let newAssignmentSubmitButton = document.querySelector("#submit-new-assignment");
         newAssignmentSubmitButton.addEventListener('click', function() {
-            <?php require_once "..\Database\add-new-assignment.php" ?>
+            <?php require_once "..\Database\add-new-assignment.php"; ?>
         })
     </script>
 

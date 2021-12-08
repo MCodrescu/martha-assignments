@@ -1,6 +1,5 @@
 <?php
-print_r($_POST);
-/*
+
 //Set connection variables
 $servername = "127.0.0.1";
 $username = "MCodrescu";
@@ -16,20 +15,19 @@ if (!$conn) {
 };
 
 
-
-
 if (count($_POST) != 0) {
 
     // Insert new record
-    $sql = "INSERT INTO assignments_2021 (Class, AssignmentName, DueDate, Completed) VALUES (";
+    $sql = "INSERT INTO assignments_fall_2021 (Class, AssignmentName, DueDate, Completed) VALUES (";
 
     foreach ($_POST as $value) {
         $sql .= $value . ",";
     };
 
+    $sql .= "No);";
+
+    mysqli_query($conn, $sql);
 
     // Reset the POST array and refresh the page.
     $_POST = array();
-    mysqli_close($conn);
-};
-*/
+}
