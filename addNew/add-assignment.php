@@ -43,10 +43,46 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <li class="nav-item">
                         <a class="nav-link" href="Login/logout.php">Logout</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add-assignment.php">Logout</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!--Header-->
+    <div class="container py-3">
+        <div class="row">
+            <div class="col text-center">
+                <h1>Add New Assignment</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--Add New Assignment Form-->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="ClassInput" class="form-label">Class</label>
+                        <input type="text" class="form-control" id="ClassInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="AssignmentNameInput" class="form-label">Assignment Name</label>
+                        <input type="text" class="form-control" id="AssignmentNameInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="DueDateInput" class="form-label">Due Date</label>
+                        <input type="date" class="form-control" id="DueDateInput">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
 
 </body>
 

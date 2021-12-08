@@ -41,6 +41,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <li class="nav-item">
                         <a class="nav-link" href="Login/logout.php">Logout</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addNew/add-assignment.php">Logout</a>
+                    </li>
                 </ul>
             </div>
         </div>
