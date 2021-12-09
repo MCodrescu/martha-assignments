@@ -88,6 +88,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <!--Add a Submit Button Event Listener-->
     <script>
         // The table will refresh only once the button is clicked.
+        let sql = "";
         let newAssignmentSubmitButton = document.querySelector("#submit-new-assignment");
         newAssignmentSubmitButton.addEventListener('click', function() {
             <?php require_once "..\Database\add-new-assignment.php"; ?>

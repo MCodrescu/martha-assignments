@@ -21,11 +21,10 @@ if (count($_POST) != 0) {
     $sql = "INSERT INTO assignments_fall_2021 (Class, AssignmentName, DueDate, Completed) VALUES (";
 
     foreach ($_POST as $value) {
-        $sql .= $value . ",";
+        $sql .= "'" . $value . "',";
     };
 
-    $sql .= "No);";
-
+    $sql .= "'No');";
     mysqli_query($conn, $sql);
 
     // Reset the POST array and refresh the page.
