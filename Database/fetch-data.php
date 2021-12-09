@@ -15,7 +15,7 @@ if (!$conn) {
 }
 
 $today = date("Y-m-d");
-$sql = "SELECT * FROM assignments_fall_2021  WHERE DueDate >= " . "'" . $today . "'" . " AND Completed = 'No';";
+$sql = "SELECT * FROM assignments_fall_2021  WHERE DueDate >= " . "'" . $today . "'" . " AND Completed = 'No' ORDER BY DueDate;";
 $result = mysqli_query($conn, $sql);
 
 // Create an array of table data
